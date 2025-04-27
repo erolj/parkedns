@@ -3,11 +3,11 @@ const themeToggleBtn = document.getElementById("theme-toggle");
 const logoImg = document.getElementById("logo");
 
 // Function to update logo based on theme
-function updateLogo(theme) {
-  const darkSrc = "./assets/imgs/sulut_dark.png";
-  const lightSrc = "./assets/imgs/sulut_light.png";
-  logoImg.src = theme === "dark" ? darkSrc : lightSrc;
-}
+// function updateLogo(theme) {
+//   const darkSrc = "./assets/imgs/sulut_dark.png";
+//   const lightSrc = "./assets/imgs/sulut_light.png";
+//   logoImg.src = theme === "dark" ? darkSrc : lightSrc;
+// }
 
 // Function to set theme
 function setTheme(theme) {
@@ -18,7 +18,7 @@ function setTheme(theme) {
     document.documentElement.classList.remove("dark");
     localStorage.setItem("theme", "light");
   }
-  updateLogo(theme);
+  // updateLogo(theme);
 }
 
 // Check for saved theme preference or use system preference
@@ -36,9 +36,9 @@ if (savedTheme) {
 }
 
 // Initial logo sync after theme check
-updateLogo(
-  document.documentElement.classList.contains("dark") ? "dark" : "light"
-);
+// updateLogo(
+//   document.documentElement.classList.contains("dark") ? "dark" : "light"
+// );
 
 // Toggle theme when button is clicked
 themeToggleBtn.addEventListener("click", () => {
