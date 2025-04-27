@@ -1,11 +1,11 @@
 version: "3.3"
 
 services:
-  maintenance-page:
+  parkedns:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: spmb-maintenance
+    container_name: parkedns
     ports:
       - "8880:80"
     restart: unless-stopped
