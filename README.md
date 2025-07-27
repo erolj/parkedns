@@ -1,12 +1,17 @@
 # PARKEDNS
 
+## Preview
+
+<p align="center">
+  <img src="assets/imgs/under-construction.png" />
+</p>
+
 ## Install
 
 ### Alternatif A
 
 ```
-mkdir -p parkedns
-docker run -d --name parkedns --restart unless-stopped -p 8080:80 -v ./parkedns:/parkedns ghcr.io/erolj/parkedns:latest
+docker run -d --name parkedns --restart unless-stopped -p 8080:80 ghcr.io/erolj/parkedns:latest
 ```
 
 ### Alternatif B
@@ -25,7 +30,7 @@ docker compose up -d
 docker pull ghcr.io/erolj/parkedns:latest
 docker kill parkedns
 docker rm parkedns
-docker run -d --name parkedns --restart unless-stopped -p 8080:80 -v ./parkedns:/parkedns ghcr.io/erolj/parkedns:latest
+docker run -d --name parkedns --restart unless-stopped -p 8080:80 ghcr.io/erolj/parkedns:latest
 ```
 
 ### Alternatif B
