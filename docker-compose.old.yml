@@ -1,6 +1,10 @@
+version: "3.3"
+
 services:
   parkedns:
-    image: ghcr.io/erolj/parkedns:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: parkedns
     ports:
       - "8880:80"
